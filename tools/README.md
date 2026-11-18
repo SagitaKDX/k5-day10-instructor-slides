@@ -18,12 +18,15 @@ Hai trang tĩnh, deploy trên GitHub Pages:
 
 1. Dựng gói thẻ bằng `release_incidents.py` của labcoach, trên một bản clone sạch của repo mẫu. Kiểm `integrity` ✅.
 2. Nén gói: `zip -X -r the-su-co-day10.zip incidents/S1 … incidents/S8 incident-cards.md`.
-3. Mã hoá gói và sinh mã:
+3. Mã hoá gói (một lần), rồi thêm mã cho từng phòng:
 
    ```bash
-   node tools/card-pack/build_pack.mjs the-su-co-day10.zip tools/card-pack/site <thư-mục-mã-bí-mật> 10 16
+   node tools/card-pack/build_pack.mjs init the-su-co-day10.zip tools/card-pack/site <thư-mục-bí-mật>
+   node tools/card-pack/build_pack.mjs add H202 40 tools/card-pack/site <thư-mục-bí-mật>
    ```
 
-4. Deploy lại `tools/card-pack/site/` lên Pages. Mã cũ không còn dùng được.
+   `init` tạo khoá mới (`master.key`), nên mọi mã cũ hết hiệu lực. `add` dùng lại khoá, nên mã cũ vẫn dùng được.
 
-**WARNING:** Không commit các file `codes-*.csv`. Ai có mã đều tải được gói thẻ.
+4. Deploy lại `tools/card-pack/site/` lên Pages sau mỗi lần `init` hoặc `add`.
+
+**WARNING:** Không commit `master.key` hay các file `codes-*.csv`. Ai có mã đều tải được gói thẻ; ai có `master.key` tạo được mã mới.

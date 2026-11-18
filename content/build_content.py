@@ -345,12 +345,12 @@ git remote -v</pre>
       <h3>Tên người commit</h3>
 <pre class="code">git config user.name "&lt;MSSV trưởng nhóm&gt;"
 git config user.email "&lt;MSSV&gt;@example.com"</pre>
-      <p>Bấm <b>Use this template</b>. Chọn <b>Private</b>. Không dùng Fork: fork của repo mẫu luôn công khai.</p>
+      <p>Bấm <b>Use this template</b>. Chọn <b>Public</b>. Không dùng Fork. Không cần mời team chấm.</p>
     </section>
     <section class="anti">
       <h3>{ICONS_ANTI}Lỗi thường gặp</h3>
       <ul>
-        <li>Không mời tài khoản team chấm (quyền Read).</li>
+        <li>Để repo Private. Team chấm không mở được link.</li>
         <li>Không gắn <code>upstream</code>. Lúc 15:35 bàn không kéo được thẻ.</li>
         <li>Push vào repo mẫu.</li>
       </ul>
@@ -364,8 +364,8 @@ git config user.email "&lt;MSSV&gt;@example.com"</pre>
   <li>Quy tắc tên lấy từ SUBMISSION.md của lab.</li>
   <li>Dạng tên: <code>Kn-L3{A|B}-DAYxx-TenNhom-TenBai</code>. Với lab này, <code>TenBai</code> là <code>PoCtoPilotGate1</code>.</li>
   <li>Dùng <code>L3A</code> cho lớp 3A và <code>L3B</code> cho lớp 3B. Viết <code>DAY10</code> bằng chữ hoa.</li>
-  <li>Trưởng nhóm mở Settings → Collaborators. Trưởng nhóm mời tài khoản team chấm và các bạn trong bàn.</li>
-  <li>Hỏi Lab Coach để biết tên tài khoản team chấm.</li>
+  <li>Repo của bàn để Public. Team chấm đọc bài qua link, nên bàn không cần mời team chấm.</li>
+  <li>Nếu các bạn trong bàn cần push, trưởng nhóm mở Settings → Collaborators và mời các bạn đó.</li>
   <li>Email Git là địa chỉ giả <code>&lt;MSSV&gt;@example.com</code>. Không dùng email cá nhân.</li>
   <li>Kiểm <code>git remote -v</code> của từng bàn. Phải có <code>origin</code> (repo của bàn) và <code>upstream</code> (repo mẫu).</li>
 </ul>
@@ -923,7 +923,7 @@ slide(
   <div>
     <h3 class="sub">Trước khi nộp, kiểm:</h3>
     <ul class="checklist">
-      <li>Tên repo là <code>K5-L3A-DAY10-…-PoCtoPilotGate1</code> hoặc <code>K5-L3B-DAY10-…-PoCtoPilotGate1</code>. Đã mời team chấm.</li>
+      <li>Tên repo là <code>K5-L3A-DAY10-…-PoCtoPilotGate1</code> hoặc <code>K5-L3B-DAY10-…-PoCtoPilotGate1</code>. Repo để Public.</li>
       <li><code>TEAM.md</code> có họ tên, MSSV, vai và mục cá nhân của mỗi người.</li>
       <li>Bàn đã ký và push tiêu chí trước lần chạy đầu tiên.</li>
       <li>Bàn đã chốt vòng 1. Ba phiếu A, B, C đã điền mọi mục.</li>

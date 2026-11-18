@@ -7,7 +7,7 @@ submission checklist.
 Facts come from the Day 10 lab repo (VinUni-AI20k/K5_L3_Day10_PoC-to-Pilot_Gate1_student, branch
 docs/k5-lab-convention, PR #1): README.md, problem-set.md, CHECKPOINTS.md, RULES.md, RUBRIC.md,
 SUBMISSION.md, TEAM.md, submission/README.md, incidents/README.md, docs/guide.md.
-The lab counts minutes 0 to 240; the deck writes them as afternoon clock times (minute 0 = 13:30)
+The lab counts minutes 0 to 240; the deck writes them as afternoon clock times (minute 0 = 14:00)
 and the app shifts them for the morning class (app/src/session.ts).
 
 Run from the repo root:  python3 -I content/build_content.py
@@ -174,9 +174,9 @@ slide(
   <section class="panel"><h3>Vận hành và pháp lý (1 người)</h3><p>Viết HAZOP và checklist 9 nhóm việc. Đặt cổng <code>operations</code> và <code>legal</code>. Viết runbook. Gom bài nộp.</p></section>
 </div>
 <ol class="loop loop--three">
-  <li><b>Vòng 1 · 13:45–15:25</b><span>Ký tiêu chí. Đo. Tìm rủi ro. Viết cổng. Chốt v1.</span></li>
-  <li><b>Phát thẻ · 15:35</b><span>Mỗi cặp bàn bốc một thẻ, S1–S8.</span></li>
-  <li><b>Vòng 2 · 15:35–16:50</b><span>Đo lại. Tìm nguyên nhân. Sửa. Quyết định v2.</span></li>
+  <li><b>Vòng 1 · 14:15–15:55</b><span>Ký tiêu chí. Đo. Tìm rủi ro. Viết cổng. Chốt v1.</span></li>
+  <li><b>Phát thẻ · 16:05</b><span>Mỗi cặp bàn bốc một thẻ, S1–S8.</span></li>
+  <li><b>Vòng 2 · 16:05–17:20</b><span>Đo lại. Tìm nguyên nhân. Sửa. Quyết định v2.</span></li>
 </ol>
 """,
     """
@@ -198,19 +198,19 @@ slide(
 <h2 class="title">Cả buổi trên một trang</h2>
 <h3 class="sub">Vòng 1 · bàn chưa biết sự cố</h3>
 <ol class="loop loop--flow">
-  <li><b>Ký tiêu chí</b><span>13:45–14:35 · lệnh 1. Ký trước khi đo.</span></li>
-  <li><b>Đo base</b><span>14:35 · lệnh 2, 3, 4. Trợ lý chưa có cổng.</span></li>
-  <li><b>Tìm rủi ro</b><span>14:35–14:55 · HAZOP, checklist, pre-mortem.</span></li>
-  <li><b>Viết cổng</b><span>14:55–15:15 · <code>guards.py</code>, <code>operating_gates.json</code>.</span></li>
-  <li><b>Chốt và v1</b><span>15:15–15:25 · lệnh 5. Đo prepared. Viết v1.</span></li>
+  <li><b>Ký tiêu chí</b><span>14:15–15:05 · lệnh 1. Ký trước khi đo.</span></li>
+  <li><b>Đo base</b><span>15:05 · lệnh 2, 3, 4. Trợ lý chưa có cổng.</span></li>
+  <li><b>Tìm rủi ro</b><span>15:05–15:25 · HAZOP, checklist, pre-mortem.</span></li>
+  <li><b>Viết cổng</b><span>15:25–15:45 · <code>guards.py</code>, <code>operating_gates.json</code>.</span></li>
+  <li><b>Chốt và v1</b><span>15:45–15:55 · lệnh 5. Đo prepared. Viết v1.</span></li>
 </ol>
 <h3 class="sub">Vòng 2 · bàn có thẻ sự cố</h3>
 <ol class="loop loop--flow" style="counter-reset: step 5">
-  <li><b>Nhận thẻ</b><span>15:35 · kéo thẻ từ <code>upstream</code>. Bốc S1–S8.</span></li>
-  <li><b>Đo ngay</b><span>15:35–15:45 · lệnh 6. Chưa sửa gì.</span></li>
-  <li><b>Tìm nguyên nhân và sửa</b><span>15:45–16:35 · trace, fault tree, sửa, thêm chỉ số theo dõi.</span></li>
-  <li><b>v2 và gom bài</b><span>16:35–16:50 · Phiếu C mục C12. Lệnh 7.</span></li>
-  <li><b>Demo và nộp</b><span>16:50–17:30 · chiếu ba mốc. Push. Nộp LMS.</span></li>
+  <li><b>Nhận thẻ</b><span>16:05 · kéo thẻ từ <code>upstream</code>. Bốc S1–S8.</span></li>
+  <li><b>Đo ngay</b><span>16:05–16:15 · lệnh 6. Chưa sửa gì.</span></li>
+  <li><b>Tìm nguyên nhân và sửa</b><span>16:15–17:05 · trace, fault tree, sửa, thêm chỉ số theo dõi.</span></li>
+  <li><b>v2 và gom bài</b><span>17:05–17:20 · Phiếu C mục C12. Lệnh 7.</span></li>
+  <li><b>Demo và nộp</b><span>17:20–18:00 · chiếu ba mốc. Push. Nộp LMS.</span></li>
 </ol>
 """,
     """
@@ -238,7 +238,7 @@ slide(
     <tr><td class="num">Cổng</td><td>Một kiểm tra chặn hoặc giới hạn hành động của trợ lý. Cổng là code, con số trong config, hoặc người.</td></tr>
     <tr><td class="num">Lần chạy</td><td>Một lần chạy trợ lý trên một bộ ticket. Mỗi lần chạy có một mã.</td></tr>
     <tr><td class="num">Mốc</td><td>Ba cách đo: <code>base</code>, <code>prepared</code>, <code>after</code>.</td></tr>
-    <tr><td class="num">Thẻ sự cố</td><td>Một tác hại cụ thể, S1–S8. Bàn nhận lúc 15:35.</td></tr>
+    <tr><td class="num">Thẻ sự cố</td><td>Một tác hại cụ thể, S1–S8. Bàn nhận lúc 16:05.</td></tr>
     <tr><td class="num">Người phụ trách</td><td>Người có tên, chịu trách nhiệm một việc (PIC).</td></tr>
   </tbody>
 </table>
@@ -301,25 +301,26 @@ slide(
 <table class="data">
   <thead><tr><th>Giờ</th><th>Checkpoint</th><th>Repo phải có</th><th>Phiếu</th></tr></thead>
   <tbody>
-    <tr><td class="num">13:30</td><td><b>CP1</b> Cài đặt, chia vai</td><td><code>Ran 13 tests … OK</code>, <code>origin</code> và <code>upstream</code>, <code>TEAM.md</code></td><td>TEAM</td></tr>
-    <tr class="row-key"><td class="num">13:45</td><td><b>CP2</b> Viết tiêu chí. Ký lúc 14:30–14:35</td><td><code>acceptance_criteria.json</code> và <code>.lock</code> đã push</td><td>A</td></tr>
-    <tr><td class="num">14:35</td><td><b>CP3</b> Đo, tìm rủi ro, cổng vòng 1, v1</td><td>Mã lần chạy base, bản chốt vòng 1, v1 đã push</td><td>B</td></tr>
-    <tr><td class="num">15:35</td><td><b>CP4</b> Thẻ sự cố S1–S8</td><td>Report ba mốc, <code>monitor ✅</code>, <code>regression ✅</code></td><td>C</td></tr>
-    <tr><td class="num">16:35</td><td><b>CP5</b> v2, demo, nộp</td><td>Lệnh 7 in <code>ĐỦ THÀNH PHẦN</code></td><td>C12</td></tr>
+    <tr><td class="num">14:00</td><td><b>CP1</b> Cài đặt, chia vai</td><td><code>Ran 13 tests … OK</code>, <code>origin</code> và <code>upstream</code>, <code>TEAM.md</code></td><td>TEAM</td></tr>
+    <tr class="row-key"><td class="num">14:15</td><td><b>CP2</b> Viết tiêu chí. Ký lúc 15:00–15:05</td><td><code>acceptance_criteria.json</code> và <code>.lock</code> đã push</td><td>A</td></tr>
+    <tr><td class="num">15:05</td><td><b>CP3</b> Đo, tìm rủi ro, cổng vòng 1, v1</td><td>Mã lần chạy base, bản chốt vòng 1, v1 đã push</td><td>B</td></tr>
+    <tr><td class="num">16:05</td><td><b>CP4</b> Thẻ sự cố S1–S8</td><td>Report ba mốc, <code>monitor ✅</code>, <code>regression ✅</code></td><td>C</td></tr>
+    <tr><td class="num">17:05</td><td><b>CP5</b> v2, demo, nộp</td><td>Lệnh 7 in <code>ĐỦ THÀNH PHẦN</code></td><td>C12</td></tr>
   </tbody>
 </table>
-<p class="note">Nghỉ: 15:25–15:35. Push lần cuối: trước 17:30. Hạn nộp link LMS: {{DEADLINE}}.</p>
+<p class="note">Nghỉ: 15:55–16:05. Push lần cuối: trước 18:00. Hạn nộp link LMS: {{DEADLINE}}.</p>
 """,
     """
 <strong>Giờ trong buổi</strong>
 <ul>
-  <li>Lab ghi giờ theo phút 0–240. Deck đổi sang giờ lớp chiều: phút 0 là 13:30.</li>
+  <li>Lab ghi giờ theo phút 0–240. Deck đổi sang giờ lớp chiều: phút 0 là 14:00.</li>
   <li>Lớp sáng dùng cùng lịch, sớm hơn 5 tiếng. Deck tự chọn ca theo giờ máy khi mở. Nút trên header đổi ca bằng tay.</li>
-  <li>Mốc quan trọng nhất: ký tiêu chí lúc 14:30–14:35, trước lần chạy đầu tiên.</li>
+  <li>Mốc quan trọng nhất: ký tiêu chí lúc 15:00–15:05, trước lần chạy đầu tiên.</li>
   <li>Nếu bàn chạy <code>eval</code> trước khi ký, lệnh từ chối chạy.</li>
   <li>Nếu bàn ký mà không push ngay, lịch sử git không chứng minh được thứ tự.</li>
-  <li>Mốc quan trọng thứ hai: chốt cổng vòng 1 (lệnh 5) lúc 15:15–15:25. Nếu không chốt, bàn không có mốc prepared.</li>
-  <li>Lúc 15:35, coach đẩy thẻ lên repo mẫu. Bàn kéo thẻ bằng <code>git pull … upstream main</code>.</li>
+  <li>Mốc quan trọng thứ hai: chốt cổng vòng 1 (lệnh 5) lúc 15:45–15:55. Nếu không chốt, bàn không có mốc prepared.</li>
+  <li>Lúc 16:00, trong giờ nghỉ, coach đẩy thẻ lên repo mẫu.</li>
+  <li>Lúc 16:05, bàn kéo thẻ bằng <code>git pull … upstream main</code>.</li>
 </ul>
 """,
 )
@@ -351,7 +352,7 @@ git config user.email "&lt;MSSV&gt;@example.com"</pre>
       <h3>{ICONS_ANTI}Lỗi thường gặp</h3>
       <ul>
         <li>Để repo Private. Team chấm không mở được link.</li>
-        <li>Không gắn <code>upstream</code>. Lúc 15:35 bàn không kéo được thẻ.</li>
+        <li>Không gắn <code>upstream</code>. Lúc 16:05 bàn không kéo được thẻ.</li>
         <li>Push vào repo mẫu.</li>
       </ul>
     </section>
@@ -395,7 +396,7 @@ slide(
 <ul>
   <li>Không mở rồi lưu lại <code>config/acceptance_criteria.json</code> bằng trình soạn thảo tự định dạng.</li>
   <li>Một dấu cách thêm vào cũng làm đổi hash.</li>
-  <li>Lệnh 5 tạo ba file bản chốt vòng 1. Trước 15:15, ba file này chưa có. Đó là đúng.</li>
+  <li>Lệnh 5 tạo ba file bản chốt vòng 1. Trước 15:45, ba file này chưa có. Đó là đúng.</li>
   <li>Các ngưỡng, con số trong <code>operating_gates.json</code> và quyết định là của bàn.</li>
   <li>AI được gợi ý. Bàn phải giải thích được khi bàn khác hỏi.</li>
   <li>Không commit API key, mật khẩu, file <code>.env</code>. Lab không cần key.</li>
@@ -408,7 +409,7 @@ slide(
     "CP1: Cài đặt và chia vai",
     f"""
 <h2 class="title">CP1: chạy được repo, chia vai</h2>
-{meta(when="13:30–13:45", who="Cả bàn", write="<code>TEAM.md</code>", out="Repo của bàn, <code>origin</code> và <code>upstream</code>, test đạt")}
+{meta(when="14:00–14:15", who="Cả bàn", write="<code>TEAM.md</code>", out="Repo của bàn, <code>origin</code> và <code>upstream</code>, test đạt")}
 <div class="cp-layout">
   <div class="stack">
 <pre class="code code--wrap">git clone https://github.com/&lt;trưởng-nhóm&gt;/K5-L3A-DAY10-XXX-PoCtoPilotGate1.git
@@ -437,7 +438,7 @@ python3 -m unittest discover -s tests</pre>
     """
 <strong>Việc của coach trong CP1</strong>
 <ul>
-  <li>Bàn cần mạng ở bốn lúc: tạo và clone repo, push tiêu chí, kéo thẻ lúc 15:35, push bài nộp.</li>
+  <li>Bàn cần mạng ở bốn lúc: tạo và clone repo, push tiêu chí, kéo thẻ lúc 16:05, push bài nộp.</li>
   <li>Nhắc bàn kiểm wifi ngay bây giờ.</li>
   <li>Lab đã chạy thử trên Python 3.9.6 và 3.15.</li>
   <li>Nếu cài đặt lỗi, mở <code>docs/guide.md</code>, mục FAQ và mục Cài đặt.</li>
@@ -455,15 +456,15 @@ slide(
     "CP2: Viết tiêu chí, rồi ký",
     f"""
 <h2 class="title">CP2: viết tiêu chí, ký trước lần chạy đầu tiên</h2>
-{meta(when="13:45–14:35", who="Sản phẩm và kinh doanh viết chính", write="Phiếu A, <code>config/acceptance_criteria.json</code>", out="Tiêu chí đã ký và push")}
+{meta(when="14:15–15:05", who="Sản phẩm và kinh doanh viết chính", write="Phiếu A, <code>config/acceptance_criteria.json</code>", out="Tiêu chí đã ký và push")}
 <div class="cp-layout">
   <div class="stack">
     <section class="panel">
-      <h3>Câu 1.1–1.6 (13:45–14:30). Chưa chạy trợ lý.</h3>
+      <h3>Câu 1.1–1.6 (14:15–15:00). Chưa chạy trợ lý.</h3>
       <p><b>Vì sao ký trước:</b> nếu bàn xem kết quả trước, bàn dễ đặt ngưỡng vừa khớp kết quả.</p>
       <p>Viết mục tiêu của hệ thống. Viết mục tiêu của chị Oanh (kế toán) và chị Hạnh (trưởng ca CSKH). Viết một chỉ số offline và một chỉ số production. Viết câu “Nếu … thì chúng tôi sẽ …”.</p>
     </section>
-<pre class="code"><span class="c"># 14:30–14:35, ngay khi viết xong</span>
+<pre class="code"><span class="c"># 15:00–15:05, ngay khi viết xong</span>
 python3 -m lab10.criteria sign
 git add config/acceptance_criteria.json \\
         config/acceptance_criteria.lock
@@ -539,14 +540,14 @@ slide(
     "CP3: Đo, tìm rủi ro, viết cổng vòng 1",
     f"""
 <h2 class="title">CP3: đo base, tìm rủi ro, viết cổng vòng 1</h2>
-{meta(when="14:35–15:25", who="Ba vai làm song song", write="Phiếu B, mục B0–B8", out="Mã lần chạy base, 2–3 cổng, cổng trong config, v1")}
+{meta(when="15:05–15:55", who="Ba vai làm song song", write="Phiếu B, mục B0–B8", out="Mã lần chạy base, 2–3 cổng, cổng trong config, v1")}
 <div class="cp-layout">
   <div class="stack">
-<pre class="code code--wrap"><span class="c"># 2A · 14:35–14:55. Chưa sửa code. Chưa sửa config.</span>
+<pre class="code code--wrap"><span class="c"># 2A · 15:05–15:25. Chưa sửa code. Chưa sửa config.</span>
 python3 -m lab10.eval --suite base --stage base --note "baseline"
 python3 -m lab10.gate --run runs/&lt;mã&gt;/report.json
 python3 -m lab10.trace --suite base --ticket T-002 --seed 55
-<span class="c"># 2B · 14:55–15:15. Viết cổng.</span>
+<span class="c"># 2B · 15:25–15:45. Viết cổng.</span>
 python3 -m lab10.eval --suite base --stage after --note "cổng v1"</pre>
     <section class="panel">
       <h3>Ở 2A, mỗi vai làm một việc</h3>
@@ -590,7 +591,7 @@ python3 -m lab10.eval --suite base --stage after --note "cổng v1"</pre>
 slide(
     "Chốt vòng 1 và quyết định v1",
     """
-<h2 class="title">15:15–15:25: chốt cổng vòng 1, viết quyết định v1</h2>
+<h2 class="title">15:45–15:55: chốt cổng vòng 1, viết quyết định v1</h2>
 <ol class="loop loop--three">
   <li><b>Chốt cổng</b><span>Chạy <code>python3 -m lab10.checkpoint</code>. Lệnh lưu một bản của <code>guards.py</code> và <code>operating_gates.json</code>.</span></li>
   <li><b>Đo prepared</b><span>Chạy <code>eval --suite base --stage prepared</code>. Chạy <code>gate --run …</code>.</span></li>
@@ -605,9 +606,9 @@ slide(
     """
 <strong>Chuyển sang vòng 2</strong>
 <ul>
-  <li>Lúc 15:05, báo lớp còn 10 phút để chốt.</li>
+  <li>Lúc 15:35, báo lớp còn 10 phút để chốt.</li>
   <li>Bàn không chốt sẽ không có mốc prepared. Cuối buổi, lệnh 7 sẽ báo thiếu.</li>
-  <li>Bàn đã ký tiêu chí lúc 14:30–14:35. Bàn không ký lại.</li>
+  <li>Bàn đã ký tiêu chí lúc 15:00–15:05. Bàn không ký lại.</li>
   <li>Nhắc bàn commit và push trước giờ nghỉ.</li>
 </ul>
 """,
@@ -618,7 +619,7 @@ slide(
 slide(
     "Phát thẻ sự cố",
     """
-<h2 class="title">15:35: phát thẻ sự cố S1–S8</h2>
+<h2 class="title">16:05: phát thẻ sự cố S1–S8</h2>
 <pre class="code code--wrap">git pull --no-rebase --no-edit --allow-unrelated-histories -X ours upstream main
 python3 -m lab10.grade --incident Sx   <span class="c"># chạy trước khi sửa</span></pre>
 <div class="grid grid-2">
@@ -637,7 +638,7 @@ python3 -m lab10.grade --incident Sx   <span class="c"># chạy trước khi s�
     """
 <strong>Các bước phát thẻ</strong>
 <ul>
-  <li>Đẩy thẻ lên repo mẫu. Sau đó báo lớp: “Đã phát thẻ”.</li>
+  <li>Đẩy thẻ lên repo mẫu lúc 16:00, trong giờ nghỉ. Lúc 16:05, báo lớp: “Đã phát thẻ”.</li>
   <li>Bàn kéo trước giờ sẽ thấy <code>Already up to date</code>. Bàn chờ, rồi kéo lại.</li>
   <li>Lỗi <code>'upstream' does not appear to be a git repository</code>: làm lại bước 2a.</li>
   <li>Lỗi <code>Please tell me who you are</code>: làm bước 2b.</li>
@@ -690,16 +691,16 @@ slide(
     "CP4: Thẻ sự cố: tìm nguyên nhân và sửa",
     f"""
 <h2 class="title">CP4: một tác hại, nhiều nguyên nhân</h2>
-{meta(when="15:35–16:35", who="Cả bàn", write="Phiếu C, mục C0–C11", out="Report ba mốc, một chỉ số theo dõi mới")}
+{meta(when="16:05–17:05", who="Cả bàn", write="Phiếu C, mục C0–C11", out="Report ba mốc, một chỉ số theo dõi mới")}
 <div class="cp-layout">
   <div class="stack">
 <table class="data data--compact">
   <thead><tr><th>Giờ</th><th>Việc</th></tr></thead>
   <tbody>
-    <tr><td class="num">15:35</td><td>3.0 Đo prepared. Ghi cổng vòng 1 chặn được gì.</td></tr>
-    <tr><td class="num">15:45</td><td>3.1–3.4 Trace ít nhất 2 ticket. Viết HAZOP của thẻ, spec, giả định môi trường, cây lỗi.</td></tr>
-    <tr><td class="num">16:05</td><td>3.5–3.6 Sửa đúng chỗ. Thêm một hàm vào <code>MONITORS</code>.</td></tr>
-    <tr><td class="num">16:30</td><td>3.7 Vẽ lại cây lỗi. Viết risk register, runbook 4–5.</td></tr>
+    <tr><td class="num">16:05</td><td>3.0 Đo prepared. Ghi cổng vòng 1 chặn được gì.</td></tr>
+    <tr><td class="num">16:15</td><td>3.1–3.4 Trace ít nhất 2 ticket. Viết HAZOP của thẻ, spec, giả định môi trường, cây lỗi.</td></tr>
+    <tr><td class="num">16:35</td><td>3.5–3.6 Sửa đúng chỗ. Thêm một hàm vào <code>MONITORS</code>.</td></tr>
+    <tr><td class="num">17:00</td><td>3.7 Vẽ lại cây lỗi. Viết risk register, runbook 4–5.</td></tr>
   </tbody>
 </table>
 <pre class="code code--wrap">python3 -m lab10.trace --suite Sx --ticket &lt;ID&gt; --seed 11
@@ -782,15 +783,15 @@ slide(
     "CP5: Quyết định v2, demo, nộp",
     f"""
 <h2 class="title">CP5: quyết định v2, demo ba mốc, nộp bài</h2>
-{meta(when="16:35–17:30", who="Cả bàn", write="Phiếu C mục C12, <code>submission/submission.json</code>", out="Lệnh 7 in <code>ĐỦ THÀNH PHẦN</code>")}
+{meta(when="17:05–18:00", who="Cả bàn", write="Phiếu C mục C12, <code>submission/submission.json</code>", out="Lệnh 7 in <code>ĐỦ THÀNH PHẦN</code>")}
 <div class="cp-layout">
   <div class="stack">
 <table class="data data--compact">
   <thead><tr><th>Giờ</th><th>Việc</th></tr></thead>
   <tbody>
-    <tr><td class="num">16:35</td><td>Viết v2. Điền <code>submission.json</code>. Chạy lệnh 7 tới khi đủ.</td></tr>
-    <tr class="row-key"><td class="num">16:50</td><td>Demo: hai bàn cùng thẻ ngồi cặp. Mỗi bàn 5 phút. 2–3 bàn trình bày trước lớp.</td></tr>
-    <tr><td class="num">17:20</td><td>Trả con số về bản v2. Chạy lại lệnh 6 và 7. Push.</td></tr>
+    <tr><td class="num">17:05</td><td>Viết v2. Điền <code>submission.json</code>. Chạy lệnh 7 tới khi đủ.</td></tr>
+    <tr class="row-key"><td class="num">17:20</td><td>Demo: hai bàn cùng thẻ ngồi cặp. Mỗi bàn 5 phút. 2–3 bàn trình bày trước lớp.</td></tr>
+    <tr><td class="num">17:50</td><td>Trả con số về bản v2. Chạy lại lệnh 6 và 7. Push.</td></tr>
   </tbody>
 </table>
 <pre class="code">python3 -m lab10.check_submission --collect
@@ -840,12 +841,12 @@ slide(
 <table class="data data--compact">
   <thead><tr><th>#</th><th>Lệnh</th><th>Dùng khi</th></tr></thead>
   <tbody>
-    <tr><td class="num">1</td><td><code>python3 -m lab10.criteria sign</code></td><td>Ký tiêu chí. Một lần, lúc 14:30–14:35.</td></tr>
+    <tr><td class="num">1</td><td><code>python3 -m lab10.criteria sign</code></td><td>Ký tiêu chí. Một lần, lúc 15:00–15:05.</td></tr>
     <tr><td class="num">2</td><td><code>python3 -m lab10.eval --suite … --stage … --note "…"</code></td><td>Chạy trợ lý trên một bộ ticket. Lệnh in mã lần chạy.</td></tr>
     <tr><td class="num">3</td><td><code>python3 -m lab10.trace --suite … --ticket … --seed …</code></td><td>Xem từng bước của một ticket. Hoặc dùng <code>--adhoc</code>.</td></tr>
     <tr><td class="num">4</td><td><code>python3 -m lab10.gate --run runs/&lt;mã&gt;/report.json</code></td><td>So một lần chạy với tiêu chí đã ký.</td></tr>
-    <tr><td class="num">5</td><td><code>python3 -m lab10.checkpoint</code></td><td>Chốt cổng vòng 1. Một lần, lúc 15:15–15:25.</td></tr>
-    <tr><td class="num">6</td><td><code>python3 -m lab10.grade --incident Sx</code></td><td>Tự kiểm tra trên thẻ ở ba mốc. Từ 15:35.</td></tr>
+    <tr><td class="num">5</td><td><code>python3 -m lab10.checkpoint</code></td><td>Chốt cổng vòng 1. Một lần, lúc 15:45–15:55.</td></tr>
+    <tr><td class="num">6</td><td><code>python3 -m lab10.grade --incident Sx</code></td><td>Tự kiểm tra trên thẻ ở ba mốc. Từ 16:05.</td></tr>
     <tr><td class="num">7</td><td><code>python3 -m lab10.check_submission --collect</code></td><td>Gom bài nộp. Kiểm đủ thành phần.</td></tr>
   </tbody>
 </table>
@@ -937,7 +938,7 @@ slide(
     <section class="panel">
       <h3>Hạn nộp (GMT+7)</h3>
       <p class="deadline">{{DEADLINE}}</p>
-      <p>Push bài trong buổi trước 17:30. Coach có thể gia hạn tối đa 48 giờ.</p>
+      <p>Push bài trong buổi trước 18:00. Coach có thể gia hạn tối đa 48 giờ.</p>
     </section>
     <div class="cta-row">
       <button class="btn-primary" type="button" onclick="window.kickoffLab && window.kickoffLab()">Bắt đầu CP1: Cài đặt</button>

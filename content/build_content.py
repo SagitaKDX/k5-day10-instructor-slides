@@ -259,8 +259,8 @@ slide(
 <div class="grid grid-2">
   <section class="panel">
     <h3>Tên repo của bàn</h3>
-<pre class="code code--wrap">K5_Day10_3A_TenNhom
-K5_Day10_3B_TenNhom</pre>
+<pre class="code code--wrap">K5-L3A-DAY10-TenNhom-PoCtoPilotGate1
+K5-L3B-DAY10-TenNhom-PoCtoPilotGate1</pre>
     <p>Viết <code>TenNhom</code> không dấu, không khoảng trắng. Không thêm chữ <code>Lop</code>.</p>
     <p>Ghi tên repo y hệt vào <code>team</code> của tiêu chí và của <code>submission.json</code>.</p>
     <h3>Gắn repo mẫu</h3>
@@ -289,7 +289,8 @@ git config user.email "&lt;MSSV&gt;@example.com"</pre>
 <strong>Việc của coach trong 15 phút đầu</strong>
 <ul>
   <li>Quy tắc tên lấy từ SUBMISSION.md của lab.</li>
-  <li>Giữ dạng <code>K5_Day10_&lt;3A|3B&gt;_&lt;TenNhom&gt;</code>. Lệnh gom bài và team chấm dùng đúng dạng này.</li>
+  <li>Dạng tên: <code>Kn-L3{A|B}-DAYxx-TenNhom-TenBai</code>. Với lab này, <code>TenBai</code> là <code>PoCtoPilotGate1</code>.</li>
+  <li>Dùng <code>L3A</code> cho lớp 3A và <code>L3B</code> cho lớp 3B. Viết <code>DAY10</code> bằng chữ hoa.</li>
   <li>Trưởng nhóm mở Settings → Collaborators. Trưởng nhóm mời tài khoản team chấm và các bạn trong bàn.</li>
   <li>Hỏi Lab Coach để biết tên tài khoản team chấm.</li>
   <li>Email Git là địa chỉ giả <code>&lt;MSSV&gt;@example.com</code>. Không dùng email cá nhân.</li>
@@ -337,8 +338,8 @@ slide(
 {meta(when="13:30–13:45", who="Cả bàn", write="<code>TEAM.md</code>", out="Repo của bàn, <code>origin</code> và <code>upstream</code>, test đạt")}
 <div class="cp-layout">
   <div class="stack">
-<pre class="code code--wrap">git clone https://github.com/&lt;trưởng-nhóm&gt;/K5_Day10_3A_XXX.git
-cd K5_Day10_3A_XXX
+<pre class="code code--wrap">git clone https://github.com/&lt;trưởng-nhóm&gt;/K5-L3A-DAY10-XXX-PoCtoPilotGate1.git
+cd K5-L3A-DAY10-XXX-PoCtoPilotGate1
 git remote add upstream https://github.com/VinUni-AI20k/K5_L3_Day10_PoC-to-Pilot_Gate1_student.git
 python3 -m unittest discover -s tests</pre>
     <section class="panel">
@@ -807,7 +808,7 @@ slide(
   <div>
     <h3 class="sub">Trước khi nộp, kiểm:</h3>
     <ul class="checklist">
-      <li>Tên repo là <code>K5_Day10_3A_…</code> hoặc <code>K5_Day10_3B_…</code>. Đã mời team chấm.</li>
+      <li>Tên repo là <code>K5-L3A-DAY10-…-PoCtoPilotGate1</code> hoặc <code>K5-L3B-DAY10-…-PoCtoPilotGate1</code>. Đã mời team chấm.</li>
       <li><code>TEAM.md</code> có họ tên, MSSV, vai và mục cá nhân của mỗi người.</li>
       <li>Bàn đã ký và push tiêu chí trước lần chạy đầu tiên.</li>
       <li>Bàn đã chốt vòng 1. Ba phiếu A, B, C đã điền.</li>

@@ -10,6 +10,6 @@ Deck lấy nội dung từ repo lab [VinUni-AI20k/K5_L3_Day10_PoC-to-Pilot_Gate1
 - `README.md`, `problem-set.md`: timeline phút 0–240, câu 1.1–3.7, bảy lệnh, luật
 - `CHECKPOINTS.md`: 5 checkpoint CP1 đến CP5
 - `RUBRIC.md`: 100 điểm C1 đến C6, bonus tối đa 10 (bản đề xuất, chờ duyệt)
-- `RULES.md`, `SUBMISSION.md`, `TEAM.md`: AI, liêm chính, tên repo `K5_Day10_<3A|3B>_<TenNhom>`, deadline GMT+7, nộp LMS cá nhân
+- `RULES.md`, `SUBMISSION.md`, `TEAM.md`: AI, liêm chính, tên repo `K5-<L3A|L3B>-DAY10-<TenNhom>-PoCtoPilotGate1`, deadline GMT+7, nộp LMS cá nhân
 
 Khi repo lab thay đổi, cập nhật `build_content.py` theo các file trên rồi chạy lại.

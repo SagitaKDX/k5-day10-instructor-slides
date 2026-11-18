@@ -999,6 +999,24 @@ button:disabled {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.loop--flow {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-2) var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.loop--flow li::before {
+  font-size: 1.75rem;
+}
+
+.loop--flow b {
+  font-size: 1.0625rem;
+}
+
+.loop--flow span {
+  font-size: var(--fs-small);
+}
+
 .roles {
   margin-top: var(--space-2);
 }
@@ -1283,7 +1301,8 @@ button:disabled {
   .cp-layout,
   .facts,
   .loop,
-  .loop--three {
+  .loop--three,
+  .loop--flow {
     grid-template-columns: minmax(0, 1fr);
   }
 

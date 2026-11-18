@@ -122,6 +122,46 @@ quyết định    —       v1        v2
 """,
 )
 
+# 0b ── Context ─────────────────────────────────────────────────────────
+slide(
+    "Bối cảnh: trợ lý của LogiX-VN",
+    """
+<h2 class="title">Bối cảnh: trợ lý hoàn tiền của LogiX-VN</h2>
+<p class="lede">Khách nhắn khiếu nại về giao hàng. Trợ lý AI đọc tin nhắn, tra đơn, rồi tự làm 4 việc.</p>
+<div class="grid grid-2">
+  <section class="panel">
+    <h3>4 việc trợ lý tự làm</h3>
+    <ul class="plain">
+      <li><code>issue_refund</code>: hoàn tiền cho khách.</li>
+      <li><code>file_carrier_fault</code>: ghi lỗi cho hãng vận chuyển.</li>
+      <li><code>notify_carrier</code>: báo cho hãng.</li>
+      <li><code>send_reply</code>: trả lời khách.</li>
+    </ul>
+    <p class="cp-ref">Mỗi việc làm sai đều gây thiệt hại: mất tiền, ghi lỗi oan cho hãng, lộ dữ liệu khách.</p>
+  </section>
+  <section class="panel">
+    <h3>Ví dụ: ticket <code>T-002</code></h3>
+    <p>Khách viết: “Đơn giao trễ 5 ngày rồi, tôi muốn được hoàn phí vận chuyển.”</p>
+    <p>Đáp án đúng: không hoàn tiền. Trợ lý cũng có thể chuyển ca này cho người duyệt.</p>
+    <p class="cp-ref">Ở CP3, bàn chạy trace ticket này để xem trợ lý làm gì.</p>
+  </section>
+</div>
+<section class="panel panel--do">
+  <h3>Câu hỏi Gate 1: cho trợ lý chạy thử với khách thật không?</h3>
+  <p>Bàn chọn một trong bốn: <b>Tiếp tục</b> (chạy pilot) · <b>Thu hẹp</b> (chạy ở phạm vi nhỏ hơn) · <b>Cải tiến thêm</b> (sửa rồi đánh giá lại) · <b>Dừng</b>.</p>
+</section>
+""",
+    """
+<strong>Cách mở bài</strong>
+<ul>
+  <li>Đọc to tin nhắn của ticket <code>T-002</code>. Hỏi lớp: “Trợ lý có nên hoàn tiền không?”</li>
+  <li>Nói: trợ lý không chỉ trả lời. Trợ lý tự ghi tiền và ghi lỗi. Vì vậy, một lỗi nhỏ gây thiệt hại thật.</li>
+  <li>Nói: hôm nay bàn không sửa trợ lý cho “đúng hết”. Bàn quyết định có cho trợ lý chạy thật hay không, kèm bằng chứng.</li>
+  <li>Dữ liệu trong <code>data/world.json</code> là dữ liệu giả, nhưng có số thật về người trực, chi phí và trần tiền.</li>
+</ul>
+""",
+)
+
 # 1 ── Format ────────────────────────────────────────────────────────────
 slide(
     "Hình thức: một bàn, ba vai, hai vòng",
@@ -147,6 +187,39 @@ slide(
   <li>Các file khác có khóa hash. Nếu bàn sửa, lệnh tự kiểm tra báo lỗi.</li>
   <li>Bảng thành viên nằm trong <code>TEAM.md</code>, không nằm trong README.</li>
   <li>Mỗi người viết mục <code>## HoVaTen-MSSV</code> của mình. Mục này có cả exit ticket.</li>
+</ul>
+""",
+)
+
+# 1b ── Flow ────────────────────────────────────────────────────────────
+slide(
+    "Cả buổi trên một trang",
+    """
+<h2 class="title">Cả buổi trên một trang</h2>
+<h3 class="sub">Vòng 1 · bàn chưa biết sự cố</h3>
+<ol class="loop loop--flow">
+  <li><b>Ký tiêu chí</b><span>13:45–14:35 · lệnh 1. Ký trước khi đo.</span></li>
+  <li><b>Đo base</b><span>14:35 · lệnh 2, 3, 4. Trợ lý chưa có cổng.</span></li>
+  <li><b>Tìm rủi ro</b><span>14:35–14:55 · HAZOP, checklist, pre-mortem.</span></li>
+  <li><b>Viết cổng</b><span>14:55–15:15 · <code>guards.py</code>, <code>operating_gates.json</code>.</span></li>
+  <li><b>Chốt và v1</b><span>15:15–15:25 · lệnh 5. Đo prepared. Viết v1.</span></li>
+</ol>
+<h3 class="sub">Vòng 2 · bàn có thẻ sự cố</h3>
+<ol class="loop loop--flow" style="counter-reset: step 5">
+  <li><b>Nhận thẻ</b><span>15:35 · kéo thẻ từ <code>upstream</code>. Bốc S1–S8.</span></li>
+  <li><b>Đo ngay</b><span>15:35–15:45 · lệnh 6. Chưa sửa gì.</span></li>
+  <li><b>Tìm nguyên nhân và sửa</b><span>15:45–16:35 · trace, fault tree, sửa, thêm chỉ số theo dõi.</span></li>
+  <li><b>v2 và gom bài</b><span>16:35–16:50 · Phiếu C mục C12. Lệnh 7.</span></li>
+  <li><b>Demo và nộp</b><span>16:50–17:30 · chiếu ba mốc. Push. Nộp LMS.</span></li>
+</ol>
+""",
+    """
+<strong>Ba chỗ bị khóa và lý do</strong>
+<ul>
+  <li>Bước 1, ký tiêu chí: bàn viết ngưỡng khi chưa biết kết quả. Nếu bàn xem kết quả trước, bàn dễ đặt ngưỡng vừa khớp kết quả.</li>
+  <li>Bước 5, chốt vòng 1: lệnh 5 lưu một bản cổng. Ở vòng 2, lab so bản này với bản sửa. Nếu bàn sửa được bản chốt, phép so không còn ý nghĩa.</li>
+  <li>Bước 7, đo ngay khi nhận thẻ: lần đo này là mốc prepared. Nếu bàn sửa trước, bàn mất mốc này.</li>
+  <li>Nói với lớp: ba chỗ này có hash hoặc có giờ trong <code>runs/journal.jsonl</code>. Team chấm kiểm được thứ tự.</li>
 </ul>
 """,
 )
@@ -387,6 +460,7 @@ slide(
   <div class="stack">
     <section class="panel">
       <h3>Câu 1.1–1.6 (13:45–14:30). Chưa chạy trợ lý.</h3>
+      <p><b>Vì sao ký trước:</b> nếu bàn xem kết quả trước, bàn dễ đặt ngưỡng vừa khớp kết quả.</p>
       <p>Viết mục tiêu của hệ thống. Viết mục tiêu của chị Oanh (kế toán) và chị Hạnh (trưởng ca CSKH). Viết một chỉ số offline và một chỉ số production. Viết câu “Nếu … thì chúng tôi sẽ …”.</p>
     </section>
 <pre class="code"><span class="c"># 14:30–14:35, ngay khi viết xong</span>
@@ -526,6 +600,7 @@ slide(
   <section class="panel"><h3>Ba câu hỏi trước khi quyết định</h3><p>Rủi ro còn lại có chấp nhận được không? Cần thêm cổng nào, mất bao lâu? Phần nào không nên làm tiếp?</p></section>
   <section class="anti"><h3>{ICONS_ANTI}Sau mốc này</h3><ul><li>Không sửa v1.</li><li>Không sửa hai file bản chốt vòng 1.</li></ul></section>
 </div>
+<p class="note"><b>Vì sao chốt:</b> ở vòng 2, lab so bản chốt với bản sửa. Nếu bàn sửa được bản chốt, phép so này không còn ý nghĩa.</p>
 """,
     """
 <strong>Chuyển sang vòng 2</strong>
@@ -556,6 +631,7 @@ python3 -m lab10.grade --incident Sx   <span class="c"># chạy trước khi s�
     <p>Năm thẻ có nguyên nhân chính ở kỹ thuật. Ba thẻ có nguyên nhân chính ở kinh doanh hoặc con người.</p>
   </section>
 </div>
+<p class="note"><b>Vì sao đo trước khi sửa:</b> lần đo này là mốc prepared. Nếu bàn sửa trước, bàn mất mốc này và không biết cổng vòng 1 đỡ được bao nhiêu.</p>
 <p class="note">Coach đọc: “Sáng nay bàn nhận tin nhắn này. Tiêu chí đã ký không đổi. Sau 60 phút, bàn cho tôi biết: quyết định Gate 1 còn đúng không?”</p>
 """,
     """
@@ -570,6 +646,40 @@ python3 -m lab10.grade --incident Sx   <span class="c"># chạy trước khi s�
   <li>Lab Coach ghi số thẻ của từng cặp vào sổ.</li>
   <li>Ba thẻ kinh doanh hoặc con người: hàng chờ quá dài, chi phí cao hơn làm tay, nhân viên không tin trợ lý.</li>
   <li>Với ba thẻ đó, bàn sửa chủ yếu ở phạm vi, nhân sự, cách giải thích và quy trình. Code là phần nhỏ.</li>
+</ul>
+""",
+    done=3,
+)
+
+# 12b ── Read the report ─────────────────────────────────────────────────
+slide(
+    "Đọc report của lệnh 6",
+    """
+<h2 class="title">Đọc report của lệnh 6: sáu dòng</h2>
+<table class="data data--compact">
+  <thead><tr><th>Dòng</th><th>Câu hỏi</th><th>✅ khi</th></tr></thead>
+  <tbody>
+    <tr><td class="num">1 integrity</td><td>Bàn có sửa file khóa hoặc bản chốt vòng 1 không?</td><td>Không sửa. Nếu ❌, bài bị 0 điểm.</td></tr>
+    <tr><td class="num">2 criteria</td><td>Tiêu chí còn giống lúc ký không?</td><td>Còn nguyên.</td></tr>
+    <tr><td class="num">3 visible</td><td>Thẻ sự cố đã sạch chưa?</td><td>Base có lỗi. After không còn lỗi. Độ phủ pilot lớn hơn 0.</td></tr>
+    <tr><td class="num">4 hidden</td><td>Phần sửa có qua test ẩn không?</td><td>Trên máy bàn hiện “—”. Team chấm chạy sau buổi.</td></tr>
+    <tr><td class="num">5 regression</td><td>Có ca nào trước đúng, giờ sai không?</td><td>Không có ca mới hỏng. Độ phủ pilot lớn hơn 0.</td></tr>
+    <tr><td class="num">6 monitor</td><td>Bàn có chỉ số theo dõi mới không?</td><td>Có ít nhất một chỉ số trong <code>lab10/monitors.py</code>.</td></tr>
+  </tbody>
+</table>
+<section class="panel panel--warn">
+  <h3>Ba cách không được tính là sửa</h3>
+  <p>Chặn hết. Thu hẹp phạm vi về 0. Xếp thật nhiều người trực. Report đo cả độ phủ, chi phí và ROI, nên bàn không qua được bằng ba cách này.</p>
+</section>
+""",
+    """
+<strong>Cách đọc report</strong>
+<ul>
+  <li>Report có ba cột: <code>base · prepared · after</code>. Đọc từ trái sang phải.</li>
+  <li>Cột prepared cho biết cổng vòng 1 đỡ được bao nhiêu. Cột after cho biết phần sửa có tác dụng không.</li>
+  <li>Vì sao cần độ phủ lớn hơn 0: nếu trợ lý không xử lý ticket nào, không ticket nào sai. Nhưng khi đó trợ lý không có ích.</li>
+  <li>Phần cuối report ghi các dòng còn vượt trần. Bàn đọc phần này trước khi viết v2.</li>
+  <li>Bảng theo kho có cột chi phí mỗi ticket. Bàn dùng cột này cho dòng kho xấu nhất ở B8 và C12.</li>
 </ul>
 """,
     done=3,

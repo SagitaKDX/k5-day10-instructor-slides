@@ -1229,6 +1229,13 @@ button:disabled {
 }
 
 @media (max-width: 1560px) {
+  .brand-course,
+  .brand-day-long {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
   .brand-text {
     display: none;
   }

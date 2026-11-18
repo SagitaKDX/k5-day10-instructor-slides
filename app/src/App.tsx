@@ -354,7 +354,9 @@ export default function App() {
           />
           <div className="brand-text">
             <span className="brand-course">AI Thực Chiến, K5 Level 3</span>
-            <span className="brand-day">Day 10: From PoC to Pilot (Gate 1)</span>
+            <span className="brand-day">
+              Day 10<span className="brand-day-long">: From PoC to Pilot (Gate 1)</span>
+            </span>
           </div>
         </div>
 

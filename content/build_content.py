@@ -88,7 +88,7 @@ slide(
     """
 <div class="title-slide">
   <div class="title-copy">
-    <p class="course">VinUni AI20k, K5 Level 3 (3A và 3B), {{SESSION}}, {{SESSION_RANGE}}</p>
+    <p class="course"><b>Day 10 · From PoC to Pilot (Gate 1)</b> · VinUni AI20k, K5 Level 3 (3A và 3B), {{SESSION}}, {{SESSION_RANGE}}</p>
     <h1 class="hero">Ký tiêu chí trước. Đo sau. Quyết định theo số đo.</h1>
     <p class="lede">LogiX-VN có một trợ lý AI hoàn tiền khi giao hàng trễ. Bàn quyết định: cho trợ lý chạy thử với khách thật ở 2 kho, hay chưa.</p>
   </div>

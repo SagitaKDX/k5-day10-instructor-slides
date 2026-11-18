@@ -57,4 +57,6 @@ Lớp sáng bắt đầu giờ khác thì sửa `MORNING_SHIFT_HOURS` trong `app
 | N | Ghi chú giảng viên |
 | F | Toàn màn hình |
 
+Ngôn ngữ slide theo ASD-STE100 áp cho tiếng Việt: câu ngắn, câu lệnh bắt đầu bằng động từ, một từ một nghĩa (xem slide "Từ dùng trong buổi" và ghi chú đầu phần thân `content/build_content.py`).
+
 Timer tự chạy khi mở slide CP1 (15 phút), CP2 (50 phút), CP3 (50 phút), CP4 (60 phút), CP5 (55 phút). Âm báo và nhạc nền mặc định tắt. `prefers-reduced-motion` tắt chuyển động và nhạc.

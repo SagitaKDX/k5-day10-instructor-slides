@@ -102,7 +102,7 @@ quyết định    —       v1        v2
   </figure>
 </div>
 <div class="facts">
-  <section><h2>Hình thức</h2><p>Làm theo bàn, 4–5 người. 240 phút.</p></section>
+  <section><h2>Hình thức</h2><p>Làm theo bàn, 3–4 người. 240 phút.</p></section>
   <section><h2>Chấm điểm</h2><p>Không chấm tại lớp. Team chấm chấm sau buổi: 100 điểm, thêm tối đa 10 điểm thưởng.</p></section>
   <section><h2>Hạn nộp</h2><p>{{DEADLINE}} (GMT+7).</p></section>
   <section><h2>Phím</h2><p><kbd>←</kbd> <kbd>→</kbd>: đổi slide. <kbd>N</kbd>: ghi chú.</p></section>
@@ -170,7 +170,7 @@ slide(
 <p class="lede">Ở vòng 1, bàn chưa biết sự cố. Ở vòng 2, bàn nhận thẻ sự cố và đo cổng của vòng 1.</p>
 <div class="grid grid-3 roles">
   <section class="panel"><h3>Kỹ sư cổng (1–2 người)</h3><p>Chạy lệnh và trace. Viết cổng trong <code>lab10/guards.py</code>. Viết chỉ số theo dõi trong <code>lab10/monitors.py</code>.</p></section>
-  <section class="panel"><h3>Sản phẩm và kinh doanh (1–2 người)</h3><p>Viết tiêu chí. Đặt cổng <code>business</code>. Đọc chi phí và ROI. Viết quyết định v1 và v2.</p></section>
+  <section class="panel"><h3>Sản phẩm và kinh doanh (1 người)</h3><p>Viết tiêu chí. Đặt cổng <code>business</code>. Đọc chi phí và ROI. Viết quyết định v1 và v2.</p></section>
   <section class="panel"><h3>Vận hành và pháp lý (1 người)</h3><p>Viết HAZOP và checklist 9 nhóm việc. Đặt cổng <code>operations</code> và <code>legal</code>. Viết runbook. Gom bài nộp.</p></section>
 </div>
 <ol class="loop loop--three">
@@ -233,7 +233,7 @@ slide(
   <thead><tr><th>Từ</th><th>Nghĩa trong lab này</th></tr></thead>
   <tbody>
     <tr><td class="num">Gate 1</td><td>Bước đánh giá 1: cho trợ lý chạy thử với khách thật, hay chưa.</td></tr>
-    <tr><td class="num">Bàn</td><td>Nhóm 4–5 người làm chung một repo.</td></tr>
+    <tr><td class="num">Bàn</td><td>Nhóm 3–4 người làm chung một repo.</td></tr>
     <tr><td class="num">Tiêu chí</td><td>Các ngưỡng đạt. Bàn ký tiêu chí một lần, trước khi đo.</td></tr>
     <tr><td class="num">Cổng</td><td>Một kiểm tra chặn hoặc giới hạn hành động của trợ lý. Cổng là code, con số trong config, hoặc người.</td></tr>
     <tr><td class="num">Lần chạy</td><td>Một lần chạy trợ lý trên một bộ ticket. Mỗi lần chạy có một mã.</td></tr>
@@ -345,7 +345,7 @@ git remote -v</pre>
       <h3>Tên người commit</h3>
 <pre class="code">git config user.name "&lt;MSSV trưởng nhóm&gt;"
 git config user.email "&lt;MSSV&gt;@example.com"</pre>
-      <p>Để repo ở chế độ Private, dùng <b>Use this template</b>. Không dùng Fork.</p>
+      <p>Bấm <b>Use this template</b>. Chọn <b>Private</b>. Không dùng Fork: fork của repo mẫu luôn công khai.</p>
     </section>
     <section class="anti">
       <h3>{ICONS_ANTI}Lỗi thường gặp</h3>

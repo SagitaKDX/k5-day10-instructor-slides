@@ -606,8 +606,9 @@ python3 -m lab10.grade --incident Sx</pre>
         "Sửa trước khi đo prepared.",
         "Thẻ về con người mà chỉ sửa code.",
         "Ghi đè HAZOP vòng 1.",
+        "Thu hẹp phạm vi về 0 để report hết đỏ.",
     )}
-    {check("Report có <code>monitor ✅</code> và <code>regression ✅</code> không? Còn dòng nào vượt trần không?")}
+    {check("Report có <code>visible ✅</code>, <code>regression ✅</code>, <code>monitor ✅</code> không? Độ phủ pilot lớn hơn 0 không? Còn dòng nào vượt trần không?")}
   </div>
 </div>
 """,
@@ -615,7 +616,7 @@ python3 -m lab10.grade --incident Sx</pre>
 <strong>Việc của coach trong CP4</strong>
 <ul>
   <li>Bảng soát lỗi cần ít nhất 2 lỗi từ 2 nguồn khác nhau. Cần ít nhất 1 lỗi ẩn.</li>
-  <li>Vai Vận hành và pháp lý viết phần riêng của thẻ (mục C3).</li>
+  <li>Vai Vận hành và pháp lý viết phần riêng của thẻ (mục C3). Thẻ S4 không dùng C3: phần riêng nằm ở C1 và Phiếu B mục B7.6.</li>
   <li>Bàn sửa ở ba chỗ. Chỗ 1: code trong <code>lab10/guards.py</code>.</li>
   <li>Chỗ 2: con số và quy trình trong <code>config/operating_gates.json</code>. Ví dụ: phạm vi, người trực, trần, ngân sách, kiểm mẫu, cổng pháp lý.</li>
   <li>Chỗ 3: người.</li>
@@ -623,6 +624,8 @@ python3 -m lab10.grade --incident Sx</pre>
   <li>Bàn viết đủ ba ô: thước đo, dữ liệu, cách tính (mục C8).</li>
   <li>Report tự kiểm tra có sáu mục: file khóa, tiêu chí, thẻ sự cố, test ẩn, bộ nền, chỉ số theo dõi.</li>
   <li>Trên máy của bàn, mục test ẩn hiện “—”. Team chấm chạy mục này sau buổi.</li>
+  <li>Nếu độ phủ pilot bằng 0, hai mục <code>visible</code> và <code>regression</code> báo ❌. Thu hẹp về 0 không phải cách sửa.</li>
+  <li>Bảng theo kho có thêm cột chi phí mỗi ticket. Bàn dùng cột này cho dòng kho xấu nhất ở B8 và C12.</li>
 </ul>
 """,
     cp="4",
@@ -696,7 +699,7 @@ git push -u origin main</pre>
         "Không trả con số demo về bản v2 trước khi gom bài.",
         "Chỉ trưởng nhóm nộp link LMS.",
     )}
-    {check("Lệnh 7 in <code>ĐỦ THÀNH PHẦN</code> trên code và config cuối cùng không?")}
+    {check("Lệnh 7 có báo mục phiếu nào còn nguyên mẫu không? Lệnh 7 in <code>ĐỦ THÀNH PHẦN</code> trên code và config cuối cùng không?")}
   </div>
 </div>
 """,
@@ -704,6 +707,8 @@ git push -u origin main</pre>
 <strong>Việc của coach trong CP5</strong>
 <ul>
   <li>Sau demo, nếu bàn không chạy lại lệnh 6, lệnh 7 báo: “báo cáo không chạy trên đúng code và config hiện tại”.</li>
+  <li>Lệnh 7 báo tên từng mục phiếu còn nguyên mẫu (A1–A5, B0–B8, C0–C12). Bàn điền mục đó, rồi chạy lại lệnh 7.</li>
+  <li>Sau khi push, kiểm trên GitHub: <code>submission/runs/</code> có <code>journal.jsonl</code> và report ba mốc.</li>
   <li>Lab Coach hỏi theo phiếu thẻ. Lab Coach không cho điểm.</li>
   <li>Ghi lại câu trả lời demo cho team chấm.</li>
   <li>Cuối buổi, mỗi người viết exit ticket trong mục cá nhân của <code>TEAM.md</code>.</li>
@@ -811,9 +816,9 @@ slide(
       <li>Tên repo là <code>K5-L3A-DAY10-…-PoCtoPilotGate1</code> hoặc <code>K5-L3B-DAY10-…-PoCtoPilotGate1</code>. Đã mời team chấm.</li>
       <li><code>TEAM.md</code> có họ tên, MSSV, vai và mục cá nhân của mỗi người.</li>
       <li>Bàn đã ký và push tiêu chí trước lần chạy đầu tiên.</li>
-      <li>Bàn đã chốt vòng 1. Ba phiếu A, B, C đã điền.</li>
+      <li>Bàn đã chốt vòng 1. Ba phiếu A, B, C đã điền mọi mục.</li>
       <li><code>submission.json</code> đủ trường. <code>members</code> có MSSV.</li>
-      <li>Lệnh 7 in <code>ĐỦ THÀNH PHẦN</code>.</li>
+      <li>Lệnh 7 in <code>ĐỦ THÀNH PHẦN</code>. Trên GitHub có <code>submission/runs/</code>.</li>
       <li>Repo không có <code>.env</code> hay key.</li>
       <li>Mỗi người đã nộp link trên LMS.</li>
     </ul>

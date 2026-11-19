@@ -950,7 +950,7 @@ slide(
 <strong>Lời dặn cuối</strong>
 <ul>
   <li>Bấm nút để về CP1 và bắt đầu.</li>
-  <li>Hạn nộp (GMT+7): lớp sáng 23h59 ngày lab. Lớp chiều 11h59 sáng hôm sau.</li>
+  <li>Hạn nộp (GMT+7): 23h59 ngày lab, cho cả lớp sáng và lớp chiều.</li>
   <li>Slide tự hiện hạn nộp của ca đang mở.</li>
   <li>Team chấm lấy commit cuối cùng trước hạn. Commit sau hạn không được tính.</li>
   <li>Lỗi kỹ thuật sau buổi: gửi mô tả lỗi, ảnh lệnh và kết quả, trước hạn nộp.</li>
